@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" xml:lang="en">
+<head>
+    <!-- DOMjudge version 6.0.2 -->
+<meta charset="utf-8"/>
+<title>Scoreboard</title>
+<link rel="icon" href="../images/favicon.png" type="image/png" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="../css/bootstrap.min.css?v=6.0.2" type="text/css" />
+<style>
+body {
+padding-top: 1.5rem;}
+main {
+  padding: 1rem 3rem;
+}
+.nav-item {
+  padding-left: 1em;
+}
+h1,h2,h3,h4,h5,h6 {
+  text-align: center;
+}
+h1 { font-size: 2em;
+  padding-top: 3rem;
+}
+h2 { font-size: 1.5em; }
+h3 { font-size: 1.17em; }
+h4 { font-size: 1.12em; }
+h5 { font-size: .83em; }
+h6 { font-size: .75em; }
+.submitform {
+  max-width: 450px;
+}
+.clarificationform {
+  max-width: 800px;
+}
+#submitbut {
+  margin-right: 2rem;
+}
+</style>
+<link rel="stylesheet" href="../style.css?v=6.0.2" type="text/css" />
+<link rel="stylesheet" href="../css/octicons/octicons.css?v=6.0.2" />
+<script type="text/javascript" src="../js/jquery.min.js?v=6.0.2"></script>
+<script type="text/javascript" src="../js/bootstrap.min.js?v6.0.2"></script>
+<script type="text/javascript" src="../js/domjudge.js?v=6.0.2"></script>
+<script type="text/javascript" src="../js/scroll1.js"></script>
+<script type="text/javascript">
+var refreshHandler = null;
+var refreshEnabled = false;
+function enableRefresh() {
+    if (refreshEnabled) {
+        return;
+    }
+    refreshHandler = setTimeout(function () {
+        window.location = './';
+    }, 30000);
+    refreshEnabled = true;
+    window.Cookies && Cookies.set('domjudge_refresh', 1);
+}
+
+function disableRefresh() {
+    if (!refreshEnabled) {
+        return;
+    }
+    clearTimeout(refreshHandler);
+    refreshEnabled = false;
+    window.Cookies && Cookies.set('domjudge_refresh', 0);
+}
+
+function toggleRefresh() {
+    if ( refreshEnabled ) {
+        disableRefresh();
+    } else {
+        enableRefresh();
+    }
+
+    var text = refreshEnabled ? 'Disable refresh' : 'Enable refresh';
+    $('#refresh-toggle').val(text);
+}
+
+//enableRefresh();
+</script>
+</head>
+<body>
+<main role="main" class="pl-4"><img style="width:98%; height: auto; display: block; margin: -3rem auto 0 auto;" src="../images/banner.png"><div class="card"><div class="card-header" style="font-family: Roboto, sans-serif; display: flex;"><span style="font-weight: bold;">The 2018 ACM-ICPC Asia Jiaozuo Regional Practice Contest</span> <span style="color: DimGray; margin-left: auto;">scheduled to start at 14:30</span></div></div><br /><br /><div class="card-deck"><div class="card" style="font-family: Roboto, sans-serif;"><div class="card-header">Participation-Team</div><div class="card-body"><ul class="list-group list-group-flush"><li class="list-group-item">坎巴拉鸽子养殖基地</li><li class="list-group-item">杭州学军中学</li><li class="list-group-item">河南省实验中学</li><li class="list-group-item">焦作市第一中学</li><li class="list-group-item">计蒜客</li></ul></div></div><div class="card" style="font-family: Roboto, sans-serif;"><div class="card-header">Regular-Team</div><div class="card-body"><ul class="list-group list-group-flush"><li class="list-group-item">上海大学</li><li class="list-group-item">东北农业大学</li><li class="list-group-item">东北大学</li><li class="list-group-item">东北大学秦皇岛分校</li><li class="list-group-item">东北师范大学</li><li class="list-group-item">东北林业大学</li><li class="list-group-item">东华大学</li><li class="list-group-item">东南大学</li><li class="list-group-item">中北大学</li><li class="list-group-item">中南大学</li><li class="list-group-item">中南民族大学</li><li class="list-group-item">中原工学院</li><li class="list-group-item">中国人民大学</li><li class="list-group-item">中国人民解放军战略支援部队信息工程大学</li><li class="list-group-item">中国传媒大学</li><li class="list-group-item">中国地质大学（北京）</li><li class="list-group-item">中国地质大学（武汉）</li><li class="list-group-item">中国海洋大学</li><li class="list-group-item">中国石油大学（华东）</li><li class="list-group-item">中国矿业大学</li><li class="list-group-item">中国矿业大学（北京）</li><li class="list-group-item">中国科学技术大学</li><li class="list-group-item">中国科学院大学</li><li class="list-group-item">中山大学</li><li class="list-group-item">信阳师范学院</li><li class="list-group-item">兰州大学</li><li class="list-group-item">内蒙古师范大学</li><li class="list-group-item">北京交通大学</li><li class="list-group-item">北京化工大学</li><li class="list-group-item">北京大学</li><li class="list-group-item">北京师范大学</li><li class="list-group-item">北京林业大学</li><li class="list-group-item">北京理工大学</li><li class="list-group-item">北京航空航天大学</li><li class="list-group-item">北京邮电大学</li><li class="list-group-item">北华大学</li><li class="list-group-item">华东交通大学</li><li class="list-group-item">华东师范大学</li><li class="list-group-item">华东理工大学</li><li class="list-group-item">华中农业大学</li><li class="list-group-item">华中师范大学</li><li class="list-group-item">华中科技大学</li><li class="list-group-item">华北水利水电大学</li><li class="list-group-item">华南农业大学</li><li class="list-group-item">华南理工大学</li><li class="list-group-item">南京大学</li><li class="list-group-item">南京晓庄学院</li><li class="list-group-item">南京林业大学</li><li class="list-group-item">南京理工大学</li><li class="list-group-item">南京航空航天大学</li><li class="list-group-item">南京邮电大学</li><li class="list-group-item">南华大学</li><li class="list-group-item">南开大学</li><li class="list-group-item">南方科技大学</li><li class="list-group-item">南阳师范学院</li><li class="list-group-item">南阳理工学院</li><li class="list-group-item">厦门大学</li><li class="list-group-item">厦门理工学院</li><li class="list-group-item">台州学院</li><li class="list-group-item">合肥学院</li><li class="list-group-item">合肥工业大学</li><li class="list-group-item">吉首大学</li><li class="list-group-item">同济大学</li><li class="list-group-item">周口师范学院</li><li class="list-group-item">哈尔滨工业大学（威海）</li><li class="list-group-item">哈尔滨工业大学（深圳）</li><li class="list-group-item">哈尔滨工程大学</li><li class="list-group-item">哈尔滨理工大学</li><li class="list-group-item">四川农业大学</li><li class="list-group-item">四川大学</li><li class="list-group-item">四川工商学院</li><li class="list-group-item">国防科技大学</li><li class="list-group-item">大连海事大学</li><li class="list-group-item">大连理工大学软件学院</li><li class="list-group-item">天津大学</li><li class="list-group-item">天津大学仁爱学院</li><li class="list-group-item">天津工业大学</li><li class="list-group-item">太原理工大学</li><li class="list-group-item">宁波大学</li><li class="list-group-item">宁波工程学院</li><li class="list-group-item">安徽大学</li><li class="list-group-item">安阳工学院</li><li class="list-group-item">山东农业大学</li><li class="list-group-item">山东大学</li><li class="list-group-item">山东大学（威海）</li><li class="list-group-item">山东理工大学</li><li class="list-group-item">山东科技大学</li><li class="list-group-item">山西大学</li><li class="list-group-item">常州大学</li><li class="list-group-item">平顶山学院</li><li class="list-group-item">广东外语外贸大学</li><li class="list-group-item">广东工业大学</li><li class="list-group-item">广州大学</li><li class="list-group-item">广西民族大学</li><li class="list-group-item">成都东软学院</li><li class="list-group-item">成都信息工程大学</li><li class="list-group-item">成都工业学院</li><li class="list-group-item">成都理工大学</li><li class="list-group-item">暨南大学</li><li class="list-group-item">杭州师范大学</li><li class="list-group-item">杭州电子科技大学</li><li class="list-group-item">桂林电子科技大学</li><li class="list-group-item">武汉大学</li><li class="list-group-item">武汉科技大学</li><li class="list-group-item">江南大学</li><li class="list-group-item">江西理工大学</li><li class="list-group-item">江西理工大学南昌校区</li><li class="list-group-item">河北工业大学</li><li class="list-group-item">河北师范大学</li><li class="list-group-item">河南中医药大学</li><li class="list-group-item">河南农业大学</li><li class="list-group-item">河南城建学院</li><li class="list-group-item">河南大学</li><li class="list-group-item">河南工业大学</li><li class="list-group-item">河南理工大学</li><li class="list-group-item">河南科技学院</li><li class="list-group-item">河南财经政法大学</li><li class="list-group-item">河池学院</li><li class="list-group-item">河海大学</li><li class="list-group-item">浙江万里学院</li><li class="list-group-item">浙江中医药大学</li><li class="list-group-item">浙江农林大学</li><li class="list-group-item">浙江大学</li><li class="list-group-item">浙江大学城市学院</li><li class="list-group-item">浙江大学宁波理工学院</li><li class="list-group-item">浙江工业大学</li><li class="list-group-item">浙江师范大学</li><li class="list-group-item">浙江理工大学</li><li class="list-group-item">浙江财经大学</li><li class="list-group-item">清华大学</li><li class="list-group-item">湖南中医药大学</li><li class="list-group-item">湖南大学</li><li class="list-group-item">湖南工业大学</li><li class="list-group-item">湖南师范大学</li><li class="list-group-item">湖南科技大学</li><li class="list-group-item">湘潭大学</li><li class="list-group-item">烟台大学</li><li class="list-group-item">燕山大学</li><li class="list-group-item">电子科技大学</li><li class="list-group-item">石家庄铁道大学</li><li class="list-group-item">福州大学</li><li class="list-group-item">福建工程学院</li><li class="list-group-item">福建师范大学</li><li class="list-group-item">绍兴文理学院</li><li class="list-group-item">肇庆学院</li><li class="list-group-item">蒙古国立大学</li><li class="list-group-item">西北农林科技大学</li><li class="list-group-item">西北大学</li><li class="list-group-item">西北工业大学</li><li class="list-group-item">西华大学</li><li class="list-group-item">西南交通大学</li><li class="list-group-item">西南交通大学峨眉校区</li><li class="list-group-item">西南民族大学</li><li class="list-group-item">西南科技大学</li><li class="list-group-item">西安交通大学</li><li class="list-group-item">西安电子科技大学</li><li class="list-group-item">西安邮电大学</li><li class="list-group-item">贵州大学</li><li class="list-group-item">贵州工程应用技术学院</li><li class="list-group-item">郑州升达经贸管理学院</li><li class="list-group-item">郑州大学</li><li class="list-group-item">郑州师范学院</li><li class="list-group-item">郑州成功财经学院</li><li class="list-group-item">郑州科技学院</li><li class="list-group-item">郑州轻工业学院</li><li class="list-group-item">重庆大学</li><li class="list-group-item">重庆科技学院</li><li class="list-group-item">重庆邮电大学</li><li class="list-group-item">重庆邮电大学移通学院</li><li class="list-group-item">长安大学</li><li class="list-group-item">长春工业大学</li><li class="list-group-item">长春理工大学</li><li class="list-group-item">长江师范学院</li><li class="list-group-item">长沙学院</li><li class="list-group-item">长沙理工大学</li><li class="list-group-item">闽南师范大学</li><li class="list-group-item">陕西师范大学</li><li class="list-group-item">陕西科技大学</li><li class="list-group-item">青岛大学</li><li class="list-group-item">香港中文大學</li><li class="list-group-item">鲁东大学</li><li class="list-group-item">黄淮学院</li><li class="list-group-item">黑龙江大学</li></ul></div></div><div class="card" style="border: none;"></div></div><script type="text/javascript">initFavouriteTeams();</script></main>
+
+
+</body>
+</html>
